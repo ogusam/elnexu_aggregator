@@ -1,0 +1,102 @@
+.container{
+    width:100% !important;
+    height:100% !important;
+}
+
+.sider{
+    background: #3E4095 !important;
+    margin-top: -10px;
+    height: 100%;
+    
+}
+.trigger{
+  padding: 0 0px;
+  font-size: 0px;
+  line-height: 0px;
+
+}
+    
+.header{
+    width: 100%;
+    margin-top: -9px;
+    background: white;
+}
+.logoutbtn{
+    margin-top: 130px;
+    margin-left:25px;
+    height: 51.16px;
+    width: 146px;
+    border-radius: 109px;
+    border: none;
+    color: red;
+    background: white;
+}
+
+.menu{
+    background-color: #3E4095;
+    min-height: 127vh;
+    margin-top: 20px;
+}
+    
+
+.ant-layout-sider{
+    background-color: #3E4095 !important;
+}
+ /*   
+.ant-select-selection{
+    background-color: green;
+}
+    */
+.ant-layout-sider-children{
+    background-color:#3E4095;
+    color: white !important;
+}
+ 
+.ant-menu-item{
+    color: white !important;
+}
+
+.ant-menu-submenu-title{
+    color: white !important;
+}
+    
+.ant-menu-item-selected {
+    background-color:red !important;
+    color:white !important;
+  }
+  .ant-layout-sider{
+    height: 100%;
+  }
+
+  .content{
+    background: whitesmoke !important;
+  
+    width:100% !important; 
+    margin-left:10px;
+  }
+  .footer{
+    height: 57px;
+    background-color: #4143967A;
+    width:100% !important;
+    margin-top: 120vh;
+    
+  }
+  .footer h1{
+    text-align: center;
+    
+    font-size: 15px;
+    font-weight: 400;
+}
+  
+  .layout{
+    height: 50vh;
+  }
+  .logo{
+    background: white;
+    margin-left:43px ;
+    margin-top: 30px;
+    width: 100px;
+  }
+
+/*ant-menu-root ant-menu-inline ant-menu-light 
+ant-menu ant-menu-root ant-menu-inline ant-menu-light menu css-dev-only-do-not-override-5wsri9 */

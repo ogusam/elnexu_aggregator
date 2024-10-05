@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+
+.transaction_status{
+    display:flex;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.status{
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    background:#EFF0FF;
+
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.status div{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.transaction_title ul{
+    display: flex;
+    padding: 10px;
+    
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .transaction_title ul li{
+    margin-right: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .transaction_status{
+    display: flex;
   }
-}
+  
+  .Tbtn{
+    background: #2366B5;
+    color: whitesmoke;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  
+  .transactionTR{
+    font-size:10px;
+    
+  }
+  .transactionTR th{
+    padding: 20px;
+  }
+  .pos_transaction{
+    background-color:white;
+    margin-bottom: 20px;
+  }
+  .pos_page_title{
+    font-size: 15px;
+    font-weight:bolder;
+  }
+  .agent{
+    width:100% !important;
+  }
+
+
+
+  .settlement-form {
+    width: 812px;
+    height: 438px;
+    margin-top:70px;
+
+  padding-left: 100px;
+    
+    border-radius: 10px;
+        -webkit-box-shadow: 0pxx 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+
+    
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-right: auto;
+  }
+  
+  input,
+  select {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  
+    
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  
+  .saveBtn{
+    width: 291px;
+    font-size: 14px;
+    border: none;
+    background-color:#3E4095;
+    color: #ffffff;
+    cursor: pointer;
+height: 53px;
+border-radius: 12px;
+
+
+  }
+  .resetButton{
+    width: 291px;
+    font-size: 14px;
+    border-radius: 12px;
+    height: 53px;
+
+
+  }
+  button:active {
+    background-color: #0056b3;
+  }
+  
+  button[type="button"]{
+    background-color:#FFFFFF;
+    border: 1px solid #3E4095;
+
+  }
+  
+  button[type="button"]:hover {
+    background-color:#0056b3;
+  }
+  
+  .settlement{
+    margin-left: 50px;
+    padding-top: 50px;
+  }

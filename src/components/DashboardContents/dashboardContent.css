@@ -1,0 +1,279 @@
+.balanceContainer{
+    background:linear-gradient(
+    rgba(62, 64, 149, 1),
+    rgba(98, 99, 169, 1),
+    rgba(111, 112, 176, 1));
+    width: 440px;
+    height: 196px;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+
+}
+
+
+.dashboardmain{
+    display: flex;
+    /*justify-content: space-between;*/
+    margin-top: 20px;
+    gap: 20px;
+    
+}
+
+.dagent{
+    background:#EFF0FF;
+    width: 260px;
+    height: 117px;
+    border-radius: 13px;
+    padding: 20px;
+    flex: 1;
+}
+.terminal{
+    width: 260px;
+    height: 117px;
+    background: #EFF0FF;
+    border-radius: 13px;
+    padding: 20px;
+    flex: 1;
+}
+
+.chart{
+    border-style:solid;
+    margin-top: 10px;
+    border-color: #3E4095;
+    border-radius: 10px;
+}
+
+/*Transfer*/
+.activity
+    {
+    background: #EFF0FF;
+    width: 440px;
+    height:192px;
+    margin-top:25px;
+    border-radius:10px;
+    
+    }
+    .commission{
+        margin-top:20px;
+        margin-left: 40px;
+    }
+    /*Invoice*/
+    /*
+    .a{
+          table-layout: fixed;
+          width: 100%;  
+
+    }
+          */
+    .invoice_table{
+        width: 100%;
+    }
+    .invoice_body{
+        background:#EFF0FF;
+        width: 80%;
+    }
+    tbody tr{
+        justify-content: center;
+        text-align: center;
+        width: 80%;
+        line-height: 30px;
+        gap: 0px;
+    }
+    /*invoice*/
+    .invoice
+    {
+    width:1020px; 
+    border: 1px solid;
+    border-radius: 10px;
+    border-color:#3E4095 ;
+    margin-top: 10px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.invoice h2{
+    font-size: 15px;
+    font-style:Duplicate Sans;
+}
+.cancelled{
+    background-color:#e80000d7;
+    width: 89px;
+    height: 28px;
+    border-radius: 5px;
+    font-family: 14px;
+    font-weight: 500;
+    opacity: 10%;
+}
+.status{
+    width: 89px;
+    height:10px;
+}
+/*style={{borderStyle:"solid", borderColor:"#3E4095", borderRadius:"10px", marginTop: '10px'}}*/
+/*Transaction history*/
+.transction_history{
+    -webkit-box-shadow: 0pxx 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+    margin-left: 20px;
+    padding: 10px;
+    height: 514px;
+    width:900px;
+    border-radius: 12px;
+  }
+  .transaction_history_list ul{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 10px;
+  }
+  
+  .my_transaction_history table{
+    
+    overflow-x: scroll;
+    
+
+    
+  }
+
+/*pagination*/
+.pagination{
+    display: flex;
+    float:right;
+    margin-top: 20px;
+    margin-right: 40px;
+    gap: 10px;
+    
+}
+li{
+    list-style: none;
+}
+
+.page-n {
+    
+    border-style: solid;
+    border-color: #3E4095;
+    background: none;
+    width: 25px;
+    height: 25px;
+
+    
+}
+
+nav .active{
+    background:#3E4095;
+    border-radius: 0;
+    text-decoration: #EFF0FF;
+    color: white;
+    min-height: 20px
+}
+    
+/*agent*/
+.agent{
+    height: 731px;
+    margin-top: 50px;
+
+}
+.pos_agent{
+    font-size:12px;
+}
+.pos_agent th{
+    padding: 15px;
+}
+.agent_list{
+    background-color:#EFF0FF;
+    font-size: 15px;
+}
+.agentBtn1{
+    background: #3E4095;
+    width: 124px;
+    height: 42px;
+    border: none;
+    margin-left: 80px;
+    border-radius: 10px;
+    color:#EFF0FF
+}
+.agentBtn2{
+    background: #3E4095;
+    width: 124px;
+    height: 42px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: #EFF0FF;
+}
+.search{
+    width: 218.68px;
+    height: 33.7px;
+    border-radius: 6.27px;
+}
+.data_search{
+    width: 200px;
+    height: 34.49px;
+    border-radius: 6.27px;
+    
+}
+
+/*pos transaction*/
+.pos_transaction{
+    width: 1127px;
+}
+
+/*transfer*/
+.main_balance{
+    width:215px;
+    height:150px;
+    background:#3E4095;
+    border-radius: 12px;
+    color: white;
+    padding-left: 30px;
+    padding-top: 40px;
+}
+
+.do_transfer{
+    width:215px;
+    height:150px;
+    
+    
+
+
+    
+}
+.do_transfer button{
+    width: 215px;
+    height: 150px;
+    border-radius: 12px;
+    border-color:#3E4095;
+    color:#3E4095;
+    font-size: 28px;
+}
+.balance_history_table{
+    margin-top: 30px;
+    
+}
+.balance_history_table tr .header1{
+    gap: 20px;
+
+}
+.balance_history_table tr .header2{
+    margin-left: 20px;
+    
+    padding-left: 20px;
+    padding-right: 200px;
+}
+.balance_history_table tr .header3{
+    padding-right: 30px;
+}
+
+.status{
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+
+}
+
+.status div{
+    padding-top: 20px;
+    padding-left: 10px;
+}
