@@ -1,7 +1,7 @@
 {
   "name": "aggregator",
   "version": "0.1.0",
-  "homepage": "https://ogusam.github.io/https://github.com/ogusam/elnexu_aggregator",
+  "homepage": "https://ogusam.github.io/elnexu_aggregator",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
