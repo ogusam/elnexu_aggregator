@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom"
+import {HashRouter, Route, Routes} from "react-router-dom"
 //import Login from './components/login/Login';
 import MainLayout from './components/layout/MainLayout';
 import Dashboard from './pages/Dashboard';
@@ -19,7 +19,7 @@ import PersonalInformation from './pages/PersonalInformation';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter basename='/'>
           <Routes>
             <Route path='/' element={<Login/>}/>
           <Route path="/admin" element={<MainLayout/>}>
@@ -41,7 +41,7 @@ function App() {
           </Route>
 
           </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
