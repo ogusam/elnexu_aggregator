@@ -151,3 +151,41 @@ border-radius: 12px;
     margin-left: 50px;
     padding-top: 50px;
   }
+.login{
+  width: 100%;
+  height: 120vh;
+  background-color: black;
+}
+.nav-logo{
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+/*withdraw*/
+#withdrawInput input{
+  width: 500px;
+  margin-bottom: 20px;
+  
+}
+
+#withdraw{
+  align-content: center;
+
+margin-top: 30px;
+}
+#withdraw h1{
+  text-align: center;
+}
+.withdraw_form{
+  width: 573px;
+  
+}
+#WithdrawCommission{
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+}

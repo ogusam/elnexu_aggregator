@@ -2,7 +2,7 @@ import React from 'react'
 
 import MainBalance from '../components/DashboardContents/MainBalance'
 import { DoTransfer } from '../components/DashboardContents/DoTransfer'
-
+import { Link, Outlet } from 'react-router-dom'
 const Transfer = () => {
   return (
     <div>
@@ -10,13 +10,20 @@ const Transfer = () => {
         <div style={{marginTop: "60px"}}>
                 <div style={{display: "flex", gap: "30px"}}>
                     <div>
-                    <MainBalance/>
+                  <Link to='transfer/balance'><MainBalance/></Link>  
                     </div>
                     <div>
-                    <DoTransfer/>
+                      <Link to='transfer/transferForm'>
+                      <DoTransfer/>
+                      </Link>
                     </div>
-                </div>
+                    
 
+                </div>
+                <div style={{marginTop:'20px'}}>
+                <Outlet/>
+                </div>
+                {/*
                 <div>
                   <h2 style={{fontSize:"15px", color:"#2C6DB8", marginTop: "70px"}}>Balance History</h2>
                   <hr></hr>
@@ -31,8 +38,9 @@ const Transfer = () => {
                     <th className='header4'>Balance afer Transfer</th>
                   </tr>
                 </table>
-
+        */}
         </div>
+        
     </div>
   )
 }

@@ -4,27 +4,30 @@ import { CiLogout } from "react-icons/ci";
 
 import "./Layout.css"
 import elnexu_logo from "../assets/elnexu_logo.png"
+import logo2 from '../assets/logo2.png'
 import SyncAltRoundedIcon from '@mui/icons-material/SyncAltRounded';
 import { FaUser } from "react-icons/fa";
 import { FaUserEdit } from "react-icons/fa";
 import { Outlet } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { GridView } from '@mui/icons-material';
-
+import { useLocation } from 'react-router-dom';
 const { Header, Footer, Sider, Content, } = Layout;
 
 const MainLayout = () => { 
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
-
+  const location = useLocation();
+  const { pathname } = location;
 
   return (
     <Layout className='container'>
         <Sider className='sider'
         trigger={null} collapsible collapsed={collapsed}>
           <div>
+          
           <img src={elnexu_logo} alt='' className='logo' />
-
+          <img src={logo2} alt='' className='logo2'/>
           </div>
           <Menu
           className='menu'
@@ -43,11 +46,13 @@ const MainLayout = () => {
               },
               {
                 label: "TRANSACTIONS ",
+                key: "Transaction",
+
                 icon:<SyncAltRoundedIcon/>,
                 children:[
                   {
                     label:"POS Transactions",
-                    key: "pos",
+                    key: "POSTransactions",
                     icon: ""
                   },
                   {
@@ -104,7 +109,7 @@ const MainLayout = () => {
                 children:[
                   {
                     label: "Personal Information",
-                    key: "pos-agent",
+                    key: "PersonalInformation",
                     icon: <FaUserEdit />
                     ,
                   },
@@ -136,9 +141,11 @@ const MainLayout = () => {
                             fontSize: '10px',
                             width: 20,
                             height: 20,
+                            
                           }}
               
           />
+                   <b>{pathname.slice(7)}</b><br />
         </Header>
         <Content className='content'>
           <Outlet/>
