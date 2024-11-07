@@ -20,6 +20,17 @@
     
 }
 
+@media only screen and (max-width: 960px) {
+    .dashboardmain{
+        flex-direction: column;
+        
+    }
+}
+.dashbaord_terminal{
+    display: flex;
+    gap: 20px;
+}
+
 .dagent{
     background:#EFF0FF;
     width: 260px;
@@ -93,6 +104,11 @@
     padding-left: 20px;
     padding-right: 20px;
 
+}
+@media only screen and (max-width: 960px) {
+    .invoice{
+        width: 400px;
+    }
 }
 .invoice h2{
     font-size: 15px;

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Layout, Menu, Button} from 'antd';
 import { CiLogout } from "react-icons/ci";
 
@@ -15,6 +15,25 @@ import { useLocation } from 'react-router-dom';
 const { Header, Footer, Sider, Content, } = Layout;
 
 const MainLayout = () => { 
+  
+  const[displayusername, displayusernameupdate]=useState('')
+  
+
+  useEffect(()=>{
+    let username=sessionStorage.getItem('username');
+    
+
+    if(username==='' || username ===null){
+    navigate('./LoginForm')
+    }else{
+      displayusernameupdate(username)
+      
+    }
+     
+
+  },[]);
+
+
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
@@ -32,7 +51,7 @@ const MainLayout = () => {
           <Menu
           className='menu'
           mode='inline'
-          defaultSelectedKeys={['dashboard']}
+          defaultSelectedKeys={['Dashboard']}
           onClick={({key})=>{
             navigate(key);
           }            
@@ -41,7 +60,7 @@ const MainLayout = () => {
             [
               {
               label: "DASHBOARD",
-              key: "dashboard",
+              key: "Dashboard",
               icon: <GridView/>
               },
               {
@@ -57,7 +76,7 @@ const MainLayout = () => {
                   },
                   {
                     label: "Transfer",
-                    key:"transfer"
+                    key:"Transfer"
                     
                   },
                   {
@@ -74,12 +93,12 @@ const MainLayout = () => {
                 children:[
                   {
                     label:"POS Agent",
-                    key: "agent",
+                    key: "Agent",
                     icon: "",
                   },
                   {
                     label: "Marchant",
-                    key:"marchant"
+                    key:"Marchant"
                     
                   },
                 
@@ -91,7 +110,7 @@ const MainLayout = () => {
                 children:[
                   {
                     label: "Set SettleBank Account",
-                    key: "settlement",
+                    key: "Settlement",
                     icon: "",
                   },
                   {
@@ -145,7 +164,10 @@ const MainLayout = () => {
                           }}
               
           />
-                   <b>{pathname.slice(7)}</b><br />
+                   <b style={{color:'#3E4095', fontSize:"15px", marginLeft:'10px'}}>{pathname.slice(7)}</b><br />
+                   <div style={{marginTop:'-50px', float:'right', paddingTop:'-0px', fontWeight:'bolder', fontSize:'20px'}}>{displayusername}</div>
+            
+                
         </Header>
         <Content className='content'>
           <Outlet/>

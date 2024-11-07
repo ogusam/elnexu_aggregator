@@ -10,7 +10,7 @@ import Invoice from '../components/DashboardContents/Invoice';
 const Dashboard = () => {
   return (
     <div className='dashboard'>
-      <h2>Dashboard</h2>
+      
           <div className='dashboardmain'>
               <div>
                     <div>
@@ -23,7 +23,7 @@ const Dashboard = () => {
                     </div>
               </div>
               <div>
-                  <div style={{display: 'flex', gap: '20px'}}>
+                  <div className='dashbaord_terminal'>
                     <Dagent/>
                     <Terminal/>
                   </div>

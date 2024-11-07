@@ -113,5 +113,14 @@
   .ant-layout-sider-collapsed .logo{
     display: none;
   }
+
+  @media only screen and (max-width: 960px) {
+    .footer{
+      margin-top: 175vh;
+    }
+    .menu{
+      min-height: 178vh;
+    }
+  }
 /*ant-menu-root ant-menu-inline ant-menu-light 
 ant-menu ant-menu-root ant-menu-inline ant-menu-light menu css-dev-only-do-not-override-5wsri9 */

@@ -1,10 +1,13 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
+
 import { TextField, Button, Container, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import laptop from '../assets/laptop.png'
 import elnexu_logo from '../assets/elnexu_logo.png'
 import footer_logo from '../assets/footer_logo.png'
-import TextArea from 'antd/es/input/TextArea';
+//import TextArea from 'antd/es/input/TextArea';
 import { alignProperty } from '@mui/material/styles/cssUtils';
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,7 +59,37 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const defaultUsername = 'elnexu';
+const defaultPassword = 'password123';
+
+
 const Login = () => {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+  useEffect(()=>{
+    sessionStorage.clear();
+      },[])
+    
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(username);
+    console.log(password);
+    if (username === defaultUsername && password === defaultPassword) {
+      sessionStorage.setItem('username',username)
+
+      navigate('/admin');
+      console.log(username);
+      toast.success('welcome to elnexu');
+    } else {
+      toast.error('Invalid username or password');
+    }
+  };
+
+
   const classes = useStyles();
 
   return (
@@ -71,30 +104,42 @@ const Login = () => {
     </div>
     <Container maxWidth="xs" className={classes.root}>
       <div style={{color:'white', fontWeight:400, fontFamily: 'JK Abode', fontSize: '30px'}}>login</div>
-      <Box>
+      <Box >
+      <form onSubmit={handleSubmit}>
         <TextField
         sx={{mt: 2}}
           className={classes.textField}
           label="Username"
+          id="username"
           variant="standard"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+
           fullWidth
         />
         <TextField
         sx={{mt: 2}}
           className={classes.textField}
           label="Password"
+          id='password'
           type="password"
           variant="standard"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+
           fullWidth
         />
         <Button
           sx={{mt: 2}}
-          
+          type='submit'
           fullWidth
           className={classes.button}
+          
+
         >
           login
         </Button>
+        </form>
       </Box>
     </Container>
     <div style={{width:'471px', height:'250px', marginTop: '-25px'}}>

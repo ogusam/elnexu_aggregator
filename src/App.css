@@ -189,3 +189,7 @@ margin-top: 30px;
   justify-items: center;
   justify-self: center;
 }
+
+.avatar-uploader{
+  background-color:#EFF0FF;
+}
